@@ -1,10 +1,11 @@
 body {
+ 
   font-family: sans-serif;
   margin: 0 auto;
   padding: 25px;
-  max-width: 400px;
-  min-width: 400px;
-  background-color: #dfe6e9;
+  max-width: none;
+  min-width: 0;
+  background-color: #567f91;
   text-align: center;
 }
 
@@ -20,10 +21,11 @@ body {
   position: relative;
   padding: 25px 15px;
   background-color: #81ecec;
-  margin: 50px 0;
+  margin: 0;
   height: 200px;
   box-shadow: 0 2px 5px #ccc;
   text-align: left;
+ width: 350px;
 }
 
 .top {
@@ -63,4 +65,15 @@ body {
 .info {
   margin: 20px 0;
   color: #1a7e76;
+}
+
+
+.cardContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
 }
