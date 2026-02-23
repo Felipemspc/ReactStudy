@@ -19,14 +19,7 @@ const contacts = [
       "https://i.pinimg.com/originals/e3/94/47/e39447de921955826b1e498ccf9a39af.png",
     phone: "+918 372 574",
     email: "gmail@chucknorris.com"
-  },
-  {
-    name: "Bruce Lee",
-    imgURL:
-      "https://imgs.search.brave.com/Qw1419Px8GFLt7iOyB5LwwegUQ_lujeJNnmOWN5r14g/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvYnJ1/Y2UtbGVlLXdhbGxw/YXBlci0xMi1iOWNv/bmlmYWE4eXdkY3Fp/LmpwZw",
-    phone: "+192 837 465",
-    email: "bruce@gmail.com"
   }
 ];
 
-export default contacts;
+export default contacts
