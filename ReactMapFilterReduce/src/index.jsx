@@ -60,21 +60,43 @@ console.log(novoNumero)
 // to install the node modules and
 // npm run dev
 // to launch your react project in your browser
-
 import emojipedia from "./emojipedia"
 
-console.log(emojipedia)
-
-const somenteNomes = emojipedia.map(function(names){
-    return names.meaning.substring(0,50);
-})
-
-console.log(somenteNomes)
 
 
 
-const textoSemBiceps = emojipedia.filter(function (removerBiceps){
-    return removerBiceps.meaning.includes("biceps")
-})
+var numerosSorteados = [2,4,13,25,36,66,78,79];
 
-console.log(textoSemBiceps)
+console.log("Os números sorteados são: " + numerosSorteados)
+
+
+function numeroPares(x){
+    return x % 2 === 0;
+}
+
+function multiplicador(y){
+    return y * 3;
+}
+
+
+
+console.log(numerosSorteados.filter(numeroPares))
+console.log(numerosSorteados.map(multiplicador))
+
+
+function reduzindo(acumulador,numeroSeguinte){
+    console.log("O número Acumulador é: " + acumulador)
+    console.log("O número Seguinte é: " + numeroSeguinte)
+    return acumulador + numeroSeguinte
+};
+
+var novoNumero = numerosSorteados.reduce(reduzindo)
+console.log(novoNumero)
+
+
+function numerosPequenos(x){
+    return x < 10
+};
+
+var numerosBaixos = numerosSorteados.findIndex(numerosPequenos)+1
+console.log("O primeiro número abaixo de 10 está na posição: " + numerosBaixos +"º")
