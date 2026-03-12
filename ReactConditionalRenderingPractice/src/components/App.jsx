@@ -1,13 +1,13 @@
 import React from "react";
 import Form from "./Form";
 
-let userIsRegistered = true;
+const userIsRegistered = false;
 
 function App() {
   return (
     <div className="container">
       <Form 
-       usuarioRegistrado = {userIsRegistered}
+      usuarioLogado = {userIsRegistered}
       />
     </div>
   );
