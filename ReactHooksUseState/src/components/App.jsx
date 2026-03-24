@@ -1,34 +1,36 @@
+import React, {useState} from "react";
 
-import React ,{ useState } from "react";
+
+
+
+
+
+
+
+
+
 
 
 function App() {
-
-  const [count, setCount] = useState (0);
-
+  const [contagem, setContagem ] = useState(0)
   function acrescentar(){
-    setCount(count + 1 );
+    setContagem(contagem + 1 )
   }
 
   function diminuir(){
-    if(count === 0){
-      console.log('Nível Mínimo Permitido.')
-      alert('Nível Minimo Atingido!')
-      return;
+    if(contagem <= 0){
+      console.log('Você chegou no limite. tente somar.')
+      return
     }
-      setCount(count -1)
-    
+    setContagem(contagem - 1)
   }
 
-
-
-  return <div>
-   <div className="container">
-     <h1>{count}</h1>
-     <button onClick={acrescentar}>+</button>
-     <button onClick={diminuir}>-</button>
-   </div>
-  </div>
+  return  <div className="container">
+    <h1>{contagem}</h1>
+    <button onClick={acrescentar}>+</button>
+    <button onClick={diminuir}>-</button>
+    
+  </div>;
 }
 
 export default App;
