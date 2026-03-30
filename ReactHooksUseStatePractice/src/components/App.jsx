@@ -6,16 +6,20 @@ import React, {useState} from "react";
 
 
 function App() {
-  let [horario,setHorario] = useState(new Date().toLocaleTimeString())
-  function obterHorario(){
-    setHorario(new Date().toLocaleTimeString())
+
+  const agora = new Date().toLocaleTimeString();
+  const [novoHorario, setNovoHorario] = useState(agora)
+
+  function updateTime(){
+    const horarioAtualizado = new Date().toLocaleTimeString();
+    setNovoHorario(horarioAtualizado);
   }
-  setInterval(obterHorario,1000)
+  setInterval(updateTime,1000)
 
   return (
     <div className="container">
-      <h1>{horario}</h1>
-      <button onClick={obterHorario}>Get Time</button>
+      <h1>{novoHorario}</h1>
+      <button onClick={updateTime}>Get Time</button>
     </div>
   );
 }
