@@ -1,81 +1,66 @@
-// CHALLENGE: uncomment the code below and see the car stats rendered
+//CHALLENGE: uncomment the code below and see the car stats rendered
 import React from "react";
 import ReactDOM from "react-dom/client";
-import animals from "./data";
 import cars from "./practice";
-
-//console.log(animals)
-
-//const [cat,dog] = animals;
-
-//console.log(cat)
-//console.log(dog)
-
-//const {name, sound} = dog
-//console.log(sound)
-
-//  OR
-//I CAN SIMPLY SET THE VARIABLES WITH THE NAMES THAT I WANT FOR EXample:
-
-//const {name: catName, sound: catSound} = cat
-//console.log(catSound)
-
-// i can also give a default value for example(caso a variavel que esta em data.js nao possua o nome do animal)
-// esse será o novo valor atribuído :
-
-//const {name = "Pe de Pano", sound = "Auuuuuuuuu"} = dog
-//console.log(name)
-
-//and if we have an object inside a object, we can do like this:
-
-//const {name, sound, feedingRequirements:{food,water} } = cat
-
-//console.log("Quantidade de vezes de agua por dia: " + water)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-//Destructuring cars Array
-var [honda, tesla] = cars;
+// Destructuring the array to get the 2 cars OBJECTS
 
-console.log(tesla);
-console.log(honda);
+const [hondaA, teslaA] = cars;
 
+console.log(teslaA);
+console.log(hondaA);
 
-//Destructuring Tesla Info
+let tesla = {
+    model:teslaA.model,
+    TopColour:teslaA.coloursByPopularity[0],
+    TopSpeed:teslaA.speedStats.topSpeed
+} 
+let honda ={
+    model:hondaA.model,
+    TopColour:hondaA.coloursByPopularity[0],
+    TopSpeed:hondaA.speedStats.topSpeed
 
-const {
-  model: teslaModel,
-  coloursByPopularity: [teslaTopColour],
-  speedStats: { topSpeed: teslaTopSpeed },
-} = tesla;
-console.log(teslaModel);
-console.log(teslaTopColour);
-console.log(teslaTopSpeed);
-
-tesla = {
-  model: teslaModel,
-  TopSpeed: teslaTopSpeed,
-  TopColour: teslaTopColour
 }
 
 
-//Destructuring Hond Info
-const {
-  model: hondaModel,
-  coloursByPopularity: [hondaTopColour],
-  speedStats: { topSpeed: hondaTopSpeed },
-} = honda;
+//Destructuring the Tesla object to extract specific properties into rename constants
 
-console.log(hondaModel);
-console.log(hondaTopColour);
-console.log(hondaTopSpeed);
+//const {
+//  model: teslaModel,
+//  coloursByPopularity: [teslaTopColour],
+//  speedStats: { topSpeed: teslaTopSpeed },
+//} = teslaA;
+//
+//console.log(teslaA)
+//
+////Destructuring the Honda object to extract specific properties into rename constants
+//
+//const {
+//  model: hondaModel,
+//  coloursByPopularity: [hondaTopColour],
+//  speedStats: { topSpeed: hondaTopSpeed },
+//} = hondaA;
+//
+//console.log(hondaA)
 
+// Now i can set new variables to each car with the names that is required on the table.
+// Setting new Variables to TESLA
 
-honda = {
-  model: hondaModel,
-  TopSpeed: hondaTopSpeed,
-  TopColour: hondaTopColour
-}
+//let tesla = {
+//    model:teslaModel,
+//    TopSpeed:teslaTopSpeed,
+//    TopColour:teslaTopColour
+//};
+// Setting new Variables to HONDA
+
+//let honda = {
+//    model:hondaModel,
+//    TopSpeed:hondaTopSpeed,
+//    TopColour:hondaTopColour
+//};
+
 
 root.render(
   <table>
